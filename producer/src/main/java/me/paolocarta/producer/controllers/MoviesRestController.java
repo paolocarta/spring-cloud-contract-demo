@@ -8,13 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-import org.springframework.beans.factory.annotation.Value;
-
 @RestController
 public class MoviesRestController {
-
-    // @Value("movies.producer.id.count:20")
-    // private int catalogCount;
 
     @GetMapping(value = "movies/{movieId}/status", produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<Movie> getPaymentStatus(@PathVariable int movieId) {
